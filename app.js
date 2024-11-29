@@ -1,14 +1,9 @@
 //MODULES
-
-//  Modules allow us to have smaller files and access them in our application when needed
-
-const john = "john"
-const peter = "peter"
-
-const sayHi = (name) => {
-  console.log(`Hello there ${name}`)
-}
+// CommonJs  - Every file is module(by default)
+//  Modules - Encapsulated code (only share minimum)
+const names = require("./name")
+const sayHi = require("./utils")
 
 sayHi("susan")
-sayHi(peter)
-sayHi(john)
+sayHi(names.peter)
+sayHi(names.john)
