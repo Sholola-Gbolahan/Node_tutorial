@@ -1,14 +1,14 @@
-// GLOABALS   - NO WINDOW
+//MODULES
 
-//  __dirname   - path to current directory
-// __filename   - filename
-// require   -  function to use modules (CommonJs)
-// module  - info about current module (file)
-// process   - info about env where the program is being executed
+//  Modules allow us to have smaller files and access them in our application when needed
 
-console.log(__dirname)
-console.log(
-  setInterval(() => {
-    console.log("hello Wolrd")
-  }, 1000)
-)
+const john = "john"
+const peter = "peter"
+
+const sayHi = (name) => {
+  console.log(`Hello there ${name}`)
+}
+
+sayHi("susan")
+sayHi(peter)
+sayHi(john)
