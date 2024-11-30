@@ -1,13 +1,18 @@
-// The built in module provides many useful properties and methods for interacting with operating system.
+const { log } = require('console');
+const path = require('path')
+console.log(path.sep);
 
-// this give access to the built in module os
-const os = require('os')
+const filePath = path.join('/content','subfolder', 'test.txt')
+console.log(filePath);
+//result :  \content\subfolder\test.txt
 
-// access user info from the OS mudule]
-const userInfo = os.userInfo();
 
-console.log(userInfo);
+const base = path.basename(filePath)
+console.log(base);
+// result : test.txt
 
-// method to return system uptime in seconds
-console.log(`The system uptime is : ${os.uptime()} seconds`);
+const absolute = path.resolve(__dirname,'context','subfolder','text.text')
+console.log(absolute);
+// result : E:\React Base\NodeJs Course\Tutorial\context\subfolder\text.text
+
 
