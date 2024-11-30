@@ -1,7 +1,13 @@
-//MODULES
-// CommonJs  - Every file is module(by default)
-//  Modules - Encapsulated code (only share minimum)
-const names = require("./name")
-const sayHi = require("./utils")
+// The built in module provides many useful properties and methods for interacting with operating system.
 
-require("./mind-grenade")
+// this give access to the built in module os
+const os = require('os')
+
+// access user info from the OS mudule]
+const userInfo = os.userInfo();
+
+console.log(userInfo);
+
+// method to return system uptime in seconds
+console.log(`The system uptime is : ${os.uptime()} seconds`);
+
