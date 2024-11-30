@@ -1,18 +1,14 @@
 const { log } = require('console');
-const path = require('path')
-console.log(path.sep);
+const {readFileSync, writeFileSync, read} = require('fs')
 
-const filePath = path.join('/content','subfolder', 'test.txt')
-console.log(filePath);
-//result :  \content\subfolder\test.txt
+// Reading files
+const first = readFileSync('./content/first.txt','utf8')
+const second = readFileSync('./content/second.txt','utf8')
 
-
-const base = path.basename(filePath)
-console.log(base);
-// result : test.txt
-
-const absolute = path.resolve(__dirname,'context','subfolder','text.text')
-console.log(absolute);
-// result : E:\React Base\NodeJs Course\Tutorial\context\subfolder\text.text
+log(first)
+log(second)
 
 
+// writing files (automatic create if file didn't exit)
+
+writeFileSync('./content/result-sync.txt',`Here's the result ${first} and ${second}`,{flag : 'a'})
