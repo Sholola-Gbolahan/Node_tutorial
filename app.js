@@ -1,8 +1,10 @@
-setInterval(() => {
-    console.log('hello world')
-  }, 2000)
-  console.log(`I will run first`)
-  // process stays alive unless
-  // Kill Process CONTROL + C
-  // unexpected error
-  
+const http = require('http')
+
+const server = http.createServer((req, res) => {
+  console.log('request event')
+  res.end('Hello World')
+})
+
+server.listen(5000, () => {
+  console.log('Server listening on port : 5000....')
+})
