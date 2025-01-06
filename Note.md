@@ -1,3 +1,3 @@
 ## Event Loop
 - Asychronous get offloading
-- Eg, setTimeout( () => {}), readFile and writeFile
+- Eg, setTimeout( () => {}), readFile and writeFile, setInterval()
