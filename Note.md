@@ -5,3 +5,6 @@
 - 
 - 
 - Blocking code could be a nested For Loop
+- 
+- 
+- Going to Network Tab, Header , Response Header, Transfer-encoding is delivered as "chuncked"
